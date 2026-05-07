@@ -15,7 +15,7 @@ const CreateJobModal = ({ isOpen, onClose, onJobCreated }) => {
     const fetchUsers = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/auth/users', { 
+        const res = await axios.get('https://field-ops-inky.vercel.app/api/auth/users', { 
           headers: { 'x-auth-token': token } 
         });
         setUsers(res.data);
@@ -31,7 +31,7 @@ const CreateJobModal = ({ isOpen, onClose, onJobCreated }) => {
     if (!formData.clientId) return alert("Please select a client!");
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/jobs', formData, { 
+      await axios.post('https://field-ops-inky.vercel.app/api/jobs', formData, { 
         headers: { 'x-auth-token': token } 
       });
       

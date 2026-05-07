@@ -9,7 +9,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', formData);
+      await axios.post('https://field-ops-inky.vercel.app/api/auth/register', formData);
       alert('Signup Successful! Now Login.');
       navigate('/login');
     } catch (err) {

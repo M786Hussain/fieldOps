@@ -8,7 +8,7 @@ const ClientDashboard = () => {
   useEffect(() => {
     const fetchMyRequests = async () => {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/jobs', {
+      const res = await axios.get('https://field-ops-inky.vercel.app/api/jobs', {
         headers: { 'x-auth-token': token }
       });
       setJobs(res.data);

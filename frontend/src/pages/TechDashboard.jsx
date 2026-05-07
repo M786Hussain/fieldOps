@@ -8,7 +8,7 @@ const TechDashboard = () => {
 
   const fetchMyJobs = async () => {
     const token = localStorage.getItem('token');
-    const res = await axios.get('http://localhost:5000/api/jobs', {
+    const res = await axios.get('https://field-ops-inky.vercel.app/api/jobs', {
       headers: { 'x-auth-token': token }
     });
     setJobs(res.data);
@@ -18,7 +18,7 @@ const TechDashboard = () => {
 
   const updateStatus = async (id, newStatus) => {
     const token = localStorage.getItem('token');
-    await axios.patch(`http://localhost:5000/api/jobs/${id}/status`, 
+    await axios.patch(`https://field-ops-inky.vercel.app/api/jobs/${id}/status`, 
       { status: newStatus }, 
       { headers: { 'x-auth-token': token }}
     );
