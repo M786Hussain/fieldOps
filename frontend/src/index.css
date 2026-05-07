@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Aapka purana glassmorphism code niche rehne dein */
+:root {
+  background-color: #0f1115;
+  color: #e2e8f0;
+}
+
+body {
+  background: radial-gradient(circle at 50% -20%, #2d3748, #0f1115);
+  min-height: 100vh;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  outline: none;
+}
